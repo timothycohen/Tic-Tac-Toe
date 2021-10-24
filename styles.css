@@ -1,0 +1,42 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body{
+	font-size: 14px;
+	line-height: 14px;
+	margin: 0px;
+	padding: 0px;
+	width: 75vw;
+	height: 75vh;
+	margin: auto;
+	caret-color: white;
+}
+
+.gameboard{
+	width: 500px;
+	height: 500px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.gameboard__square{
+	font-size: 7rem;
+	width: 33.33%;
+	height: 33.33%;
+	border: 1px solid gray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.newGameBtn{
+	background-color: green;
+	border-radius: 10%;
+}
