@@ -6,14 +6,36 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Tic-Tac-Toe</title>
 	<link rel="stylesheet" href="styles.css">
+	<script src='pubsub.js' defer></script>
 	<script src="scripts.js" defer></script>
+	<style>@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Permanent+Marker&display=swap');</style>
 	<link rel="shortcut icon" type="image/png" href="#"/>
 </head>
 <body>
-	<div class='gameboard'></div>
-	<button class='newGameBtn'>New Game</button>
-	<div class='winner'></div>
-	<div class='turn'></div>
-	<div class='scoreboard'></div>
+	<div class='controls'>
+		<span class='newGameRadio--label'>First Move</span>
+		<input type="radio" class='newGameRadio--radio' name='newGameRadio' value="O" checked="true"><span class='newGameRadio--value'>O</span></input>
+		<input type="radio" class='newGameRadio--radio' name='newGameRadio' value="X"><span class='newGameRadio--value'>X</span></input>
+		<button class='newGameBtn'>New Game</button>
+		<div class='turn--label'>Player Up: </div>
+		<div class='turn'></div>
+	</div>
+	<div>
+		<div class='players'>
+			<div class='players__1'>
+				<input id='player1' type='text' value='Player O' class='players__1--input' autocomplete="off">
+				<label for='player1' class='players__1--label'>O</label>
+			</div>
+			<div class='players__2'>
+				<label for='player2' class='players__2--label'>X</label>
+				<input id='player2' type='text' value='Player X' class='players__2--input' autocomplete="off">
+			</div>
+		</div>
+		<div id="statsModule">
+			<p class="statsModule__1--count">0</p>
+			<p class="statsModule__2--count">0</p>
+		</div>
+		<div class='gameboard'></div>
+	</div>
 </body>
 </html>

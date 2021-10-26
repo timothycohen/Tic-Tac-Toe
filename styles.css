@@ -7,17 +7,20 @@ html {
 }
 
 body{
+	display: flex;
 	font-size: 14px;
 	line-height: 14px;
 	margin: 0px;
 	padding: 0px;
 	width: 75vw;
-	height: 75vh;
 	margin: auto;
-	caret-color: white;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* ######################### GAMEBOARD ######################### */
+
 .gameboard{
+	caret-color: transparent;
 	width: 500px;
 	height: 500px;
 	margin: auto;
@@ -25,18 +28,125 @@ body{
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+	background: url(seamless_paper_texture.png);
+	border: 15px solid burlywood;
+	border-radius: 10%;
+	font-family: 'Architects Daughter', cursive;
+	/* font-family: 'Permanent Marker', cursive; */
 }
 
 .gameboard__square{
 	font-size: 7rem;
 	width: 33.33%;
 	height: 33.33%;
-	border: 1px solid gray;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+
+.border-v{
+	border-top: 2px solid rgb(189, 180, 168);
+	border-bottom: 2px solid rgb(189, 180, 168);
+}
+.border-h{
+	border-left: 2px solid rgb(189, 180, 168);
+	border-right: 2px solid rgb(189, 180, 168);
+}
+
+.win{
+	background: radial-gradient(circle at center, green 0, green 60%, black 61%, transparent 70%)
+}
+
+/* ######################### PLAYERS AND STATS ######################### */
+.players{
+	width: 100%;
+	margin: 3% 0 0 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: white;
+}
+
+.players__1, .players__2{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.players__1--label, .players__2--label{
+	font-size: 2rem;
+	width: 10%;
+	font-family: 'Architects Daughter', cursive;
+}
+
+.players__2--label, .players__1--input{
+	text-align: right;
+}
+
+.players__1--input, .players__2--input{
+	font-size: 2rem;
+	width: 90%;
+	font-weight: bolder;
+	border-bottom: 0px;
+	border-top-left-radius: 5%;
+	border-top-right-radius: 5%;
+}
+
+#statsModule{
+	font-size: 2rem;
+	height: 2rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	border-bottom: 5px solid #38270f;
+	border-left: 2px solid #38270f;
+	border-right: 2px solid #38270f;
+	background: linear-gradient(90deg, #81a7de 45.1%, transparent 45.1%, transparent 55.1%, #81a7de 55.1%);
+	/* background-color: linear-gradient(0deg, blue, green 40%, red); */
+	margin: 0 0 3% 0;
+}
+
+.statsModule__1--count, .statsModule__2--count{
+	padding: 0;
+	margin: 0;
+}
+
+/* ######################### CONTROLS ######################### */
+
+.controls{
+min-width: 200px;
+margin: 250px 0;
+text-align: center;
+}
+
+.newGameRadio--label{
+	font-size: 1.3rem;
+	font-family: 'Architects Daughter', cursive;
+}
+
+.newGameRadio--value{
+	font-size: 1.7rem;
+	font-family: 'Architects Daughter', cursive;
+}
+
 .newGameBtn{
-	background-color: green;
+	font-family: 'Architects Daughter', cursive;
+	font-size: 1.3rem;
+	margin: 3% 0 25% 0;
+	background-color: burlywood;
 	border-radius: 10%;
+}
+
+.turn--label{
+	font-size: 1.3rem;
+	width: 100%;
+	margin-bottom: 5%;
+	font-family: 'Architects Daughter', cursive;
+
+}
+
+.turn{
+	font-size: 1.7rem;
+	line-height: 2rem;
+	font-weight: bolder;
 }
